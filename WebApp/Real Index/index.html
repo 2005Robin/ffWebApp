@@ -43,6 +43,22 @@
 		         von Hogwarts, die Wahrheit ueber sich, seine Eltern und die Schule für Zauberer und Hexen namens Hogwarts, in die er
 		         nach den Ferien gehen wird.
 
+		    
+		    <h1>WIE ALT BIN ICH?</h1>
+<form method="post">
+    Antwort 1 <input type="checkbox" name="1"/><br/>
+    Antwort 2 <input type="checkbox" name="5"/><br/>
+    Antwort 3 <input type="checkbox" name="14"/><br/>
+    Antwort 4 <input type="checkbox" name="13"/><br/>
+    <input type="submit"/>
+</form>
+		    
+		    // Die Richtige Antwort ist z.b. Checkbox 1 und 3
+
+if (isset($_POST["antwort_1"]) && isset($_POST["antwort_3"])) {
+    echo 'Korrekt! <a href="frage2.php">Nächste Frage</a>';
+} 
+		    
 </p></B>
 		    
 	    </html>
