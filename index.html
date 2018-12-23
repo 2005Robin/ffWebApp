@@ -4,12 +4,56 @@
 
     <head>
 		<title>Harry Potter</title>
+	    <meta charset="utf-8>
+            <meta name="viewport" content="width=device-width, maximum-scale=1.0"> 
+	    <style>
+		body {width: 100%;}
+		canvas {display: none;}
+	    </style>
+	    <script>
+		var video, canvas, msg;
+		var load = function () {
+			video = document.getElementById('video');
+			canvas = document.getElementById('canvas');
+			msg = document.getElementById('error');
+			if( navigator.getUserMedia ) {
+				video.oneclick = function () {
+					var context = canvas.getContext("2d");
+					context.drawImage(video, 0, 0, 240, 320);
+					var image = {"demo" : {
+						"type" : "device",
+						"image" : canvas.toDataURL("image/png")
+					}};
+			};
+			
+			var success = function ( stream ) {
+				video.src = stream;
+			};
+										      
+			var error = function ( err ) {
+				msg.innerHTML = "Error: " + err.code;
+			};
+							 
+			navigator.getUserMedia('video', success, error);
+							 
+		else {
+			msg.innerHTML = "Native web camera not supported :(";
+		}
+	};
+									    
+	window.addEventListener('DOMContentLoaded', load, false);
+	</script>
+									    
     </head>
 
     <body>
         <!-– Seiteninhalte -->
 	    
-	    <title>Harry Potter</title>
+		<video id="video" width=240" height="320" autoplay> </video>
+	        <p id="error">Click on the video to send a snapshot to the receiving screen</p>
+	        <canvas id="canvas" width="240" height="320"> </canvas>
+	   
+	<title>Harry Potter</title>
 	    
 	    
 	<center><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Harry_Potter_wordmark_%28British%29.svg" 
@@ -31,30 +75,6 @@
 	        <center><B><a href="orden_des_phönix.html" style="color:black" title="Orden">ORDEN DES PHOENIX</a></B></center>
 	        <center><B><a href="zaubersprüche.html" style="color:black" title="Zaubersprüche"><li>ZAUBERSPR&Uuml;CHE</li>
 			</a></B></center>
-			
-		<form action="action_page.php">
-			<div class="imgcontainer">
-				<img src="img_avatar2.png" alt="Avatar" class"avatar>
-			</div>
-									      
-		<div class="container">
-				      <label for="uname"><b>Username</b></label>
-				      <input type="text" placeholder="Enter Username" name="uname" required>
-												  
-				      <label for="psw"><b>Password</b></label>
-				      <input type="password" placeholder="Enter Password" name="psw" required>
-												    
-				      <button type="submit">Login</button>
-				      <label>
-						<input type="checkbox" checked="checked" name="remember">Remember me
-				      </label>
-		</div>
-		
-		<div class="container" style="background-color:#f1f1f1">
-			<button type="button" class="cancelbtn">Cancel</button>
-			<span class="psw">Error <a href="#">password?</a></span>
-		</div>
-		</form>
 
 	</body>
 </html>
