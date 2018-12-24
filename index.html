@@ -3,56 +3,21 @@
 <html>
 
     <head>
-		<title>Harry Potter</title>
-	    <meta charset="utf-8>
-            <meta name="viewport" content="width=device-width, maximum-scale=1.0"> 
-	    <style>
-		body {width: 100%;}
-		canvas {display: none;}
-	    </style>
-	    <script>
-		var video, canvas, msg;
-		var load = function () {
-			video = document.getElementById('video');
-			canvas = document.getElementById('canvas');
-			msg = document.getElementById('error');
-			if( navigator.getUserMedia ) {
-				video.oneclick = function () {
-					var context = canvas.getContext("2d");
-					context.drawImage(video, 0, 0, 240, 320);
-					var image = {"demo" : {
-						"type" : "device",
-						"image" : canvas.toDataURL("image/png")
-					}};
-			};
-			
-			var success = function ( stream ) {
-				video.src = stream;
-			};
-										      
-			var error = function ( err ) {
-				msg.innerHTML = "Error: " + err.code;
-			};
-							 
-			navigator.getUserMedia('video', success, error);
-							 
-		else {
-			msg.innerHTML = "Native web camera not supported :(";
-		}
-	};
-									    
-	window.addEventListener('DOMContentLoaded', load, false);
-	</script>
+	    <title>Login</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    
+	    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		    function
+		    hideURLbar(){ window.scrollTo(0,1); } </script>
+	    <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel=
 									    
     </head>
 
     <body>
         <!-– Seiteninhalte -->
 	    
-		<video id="video" width=240" height="320" autoplay> </video>
-	        <p id="error">Click on the video to send a snapshot to the receiving screen</p>
-	        <canvas id="canvas" width="240" height="320"> </canvas>
-	   
 	<title>Harry Potter</title>
 	    
 	    
