@@ -4,6 +4,68 @@
 
     <head>
 	    <title>Harry Potter</title>
+	    
+	    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0;" />
+<link rel="stylesheet" type="text/css" media="screen" href="./Beispiel:SELFHTML-Beispiel-Grundlayout.css" />
+<title>CSS-Würfel</title>
+<style>
+main {
+  background: white;
+}
+
+.cube-wrap {
+  margin-top: 100px; 
+  -webkit-perspective: 800px;
+  -webkit-perspective-origin: 50% 100px;
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform: rotateX(22deg) rotateY(-45deg) ;
+}
+
+.cube div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  box-shadow: inset 0 0 30px rgba(125,125,125,0.8);
+  text-align: center;
+  line-height: 200px;
+  font-size: 1.5em;
+}
+
+.hinten {
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.rechts {
+	transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+}
+.links {
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
+}
+.oben {
+	transform: rotateX(90deg) translateY(-100px);
+	transform-origin: top center;
+}
+.unten {
+	transform: rotateX(-90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+.vorne {
+	transform: translateZ(100px);
+}
+
+
+</style>
 	    			    
     </head>
 
@@ -43,6 +105,21 @@
 			
 			<a id="73744778" href="http://www.uhr-homepage.de">Uhr Homepage</a>
 			<script src="https://www.uhr-homepage.de/data.php?i=73744778&h=95&w=213" type="text/javascript"></script>
+			
+			<h1>CSS-Würfel</code></h1>
+  <main>
+  
+    <div class="cube-wrap">
+      <div class="cube">
+        <div class="vorne">vorne</div>
+        <div class="hinten">hinten</div>
+        <div class="oben">oben</div>
+        <div class="unten">unten</div>
+        <div class="links">links</div>
+        <div class="rechts">rechts</div>
+      </div>
+    </div>
+</main>
 			
 	</body>
 </html>
