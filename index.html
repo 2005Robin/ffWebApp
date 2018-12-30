@@ -5,6 +5,22 @@
     <head>
 	    <title>Harry Potter</title>
 	       			    
+	    function uhrzeit() {
+    var jetzt = new Date(),
+        h = jetzt.getHours(),
+        m = jetzt.getMinutes(),
+        s = jetzt.getSeconds();
+    m = fuehrendeNull(m);
+    s = fuehrendeNull(s);
+    document.getElementById('uhr').innerHTML = h + ':' + m + ':' + s;
+    setTimeout(uhrzeit, 500);
+  }
+  
+  function fuehrendeNull(zahl) {
+    zahl = (zahl < 10 ? '0' : '' )+ zahl;  
+    return zahl;
+  }
+	    
     </head>
 
     <body>
@@ -43,6 +59,22 @@
 			
 			<a id="73744778" href="http://www.uhr-homepage.de">Uhr Homepage</a>
 			<script src="https://www.uhr-homepage.de/data.php?i=73744778&h=95&w=213" type="text/javascript"></script>
+			
+			function uhrzeit() {
+    var jetzt = new Date(),
+        h = jetzt.getHours(),
+        m = jetzt.getMinutes(),
+        s = jetzt.getSeconds();
+    m = fuehrendeNull(m);
+    s = fuehrendeNull(s);
+    document.getElementById('uhr').innerHTML = h + ':' + m + ':' + s;
+    setTimeout(uhrzeit, 500);
+  }
+  
+  function fuehrendeNull(zahl) {
+    zahl = (zahl < 10 ? '0' : '' )+ zahl;  
+    return zahl;
+  }
 			
 	</body>
 </html>
