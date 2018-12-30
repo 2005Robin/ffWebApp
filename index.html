@@ -6,47 +6,27 @@
 	    <title>Harry Potter</title>
 	    
 	    <script language="JavaScript">
-
-var da=new Array("Sonntag, ","Montag, ","Dienstag, ","Mittwoch, ","Donnerstag, ","Freitag, ","Samstag, ");
-function JSClock() {
-
-var time=new Date();
-
-var hour=time.getHours();
-
-var minute=time.getMinutes();
-
-var second=time.getSeconds();
-
-var day=time.getDay();
-
-var tag=da[day];
-
-var dat=time.getDate()+".";
-
-var month=time.getMonth()+1;
-
-var m=((month<10)? "0" : "")+month+". ";
-
-var y=time.getYear();
-
-var y=time.getYear();
-
-y = ((y<1900)? y+1900 : y)+",";// fuer Netscape
-
-var temp=tag+dat+m+y+" "+hour;
-
-temp+=((minute<10)? ":0" : ":")+minute
-
-temp+=((second<10)? ":0" : ":")+second
-
-document.clockform.ausgabe.value=temp;
-
-var id=setTimeout("JSClock()",1000);
-
-}
-
-</script>
+                    var da=new Array("Sonntag, ","Montag, ","Dienstag, ","Mittwoch, ","Donnerstag, ","Freitag, ","Samstag, ");
+                    function JSClock() {
+		    var time=new Date();
+                    var hour=time.getHours();
+                    var minute=time.getMinutes();
+                    var second=time.getSeconds();
+                    var day=time.getDay();
+                    var tag=da[day];
+                    var dat=time.getDate()+".";
+                    var month=time.getMonth()+1;
+                    var m=((month<10)? "0" : "")+month+". ";
+                    var y=time.getYear();
+                    var y=time.getYear();
+                    y = ((y<1900)? y+1900 : y)+",";// fuer Netscape
+                    var temp=tag+dat+m+y+" "+hour;
+                    temp+=((minute<10)? ":0" : ":")+minute
+                    temp+=((second<10)? ":0" : ":")+second
+                    document.clockform.ausgabe.value=temp;
+                    var id=setTimeout("JSClock()",1000);
+                    }
+            </script>
  
     </head>
 
@@ -63,34 +43,13 @@ var id=setTimeout("JSClock()",1000);
 	<br>
 	<hr color="#000000">
 	    
-	    <center><B>HARRY POTTER INFORMATIONEN</b></center>
+	    <center><B>HARRY POTTER TOOLS</b></center>
 	    
 	<hr color="#000000">
 	
-		<center><B><a href="personen.html" style="color:black" title="Personen"><li>PERSONEN</li></a></B></center>
-	        <center><B><a href="Todesser.html" style="color:black" title="Todesser"><li>TODESSER</li></a></B></center>
-	        <center><B><a href="heiligtümer_des_todes.html" style="color:black" title="Heiligtümer"><li>HEILIGTUEMER DES 
-			TODES</li>
-	        <center><B><a href="orden_des_phönix.html" style="color:black" title="Orden">ORDEN DES PHOENIX</a></B></center>
-	        <center><B><a href="zaubersprüche.html" style="color:black" title="Zaubersprüche"><li>ZAUBERSPR&Uuml;CHE</li>
-			</a></B></center>
-			
-	<hr color="#000000">
-			
-		<input type="file" accept="image/*;capture=camera" type="file" accept="video/*;capture=camcorder" type="file"
-		       accept="audio/*;capture=microphone">
-			
-		<iframe src="http://www.ixq.de/uhrzeit/schwarz.php" width="90" height="40" frameborder="0" border="0"></iframe>
-	
-	<hr color="#000000">
-			
-			<a id="73744778" href="http://www.uhr-homepage.de">Uhr Homepage</a>
-			<script src="https://www.uhr-homepage.de/data.php?i=73744778&h=95&w=213" type="text/javascript"></script>
-		
-			<form name=clockform>
-<CENTER><INPUT TYPE=text NAME=ausgabe VALUE="" SIZE=50></CENTER>
-
-</form>
+             form name=clockform>
+             <center><input type=text name=ausgabe value="" size=50></center>
+             </form>
 			
 	</body>
 </html>
