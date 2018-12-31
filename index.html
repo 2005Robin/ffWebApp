@@ -28,22 +28,6 @@
                     }
             </script>
 	    
-	    <title>www.tutorials.de</title>
-<meta name="author" content="Quaese">
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
-<script type="text/javascript">
-  <!--
-var hTimer = null;
-
-function startTimer(intCount){
-  document.getElementById("outID").innerHTML = intCount;
-
-  if(intCount < 999)
-    hTimer = window.setTimeout(function(){ startTimer(++intCount);}, 1000);
-}
- //-->
-</script>
-	    
     </head>
 
     <body bgcolor="#FFFFFF" onload="JSClock()">
@@ -67,10 +51,6 @@ function startTimer(intCount){
 	    <form name=clockform>
             <center><input type=text name=ausgabe value="" size=50></center>
 	    </form>
-	    
-	    <button onclick="startTimer(0);">start</button>
-		<button onclick="window.clearTimeout(hTimer);">stop</button>
-		<div id="outID"></div>
 	    
 	</body>
 </html>
