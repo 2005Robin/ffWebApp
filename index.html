@@ -50,32 +50,6 @@
 	    <form name=clockform>
             <center><input type=text name=ausgabe value="" size=50></center>
 	    </form>
-	    
-	    <p>
-        <input type="button" value="KlickMich"/>
-    <p>
-    <div id="box"></div> 
-    
-    <script>
-    $('input').click(function() {
-        rollDice();
-    });
-    
-    function rollDice() {
-        Array.prototype.shuffle = function() {
-         for (var j, x, i = this.length; i; j = parseInt(Math.random() * i), x = this[--i], this[i] = this[j], this[j] = x);
-            return this;
-        };
-    
-        var images = ['eins.jpg', 'zwei.jpg', 'drei.jpg', 'vier.jpg', 'fuenf.jpg'];
-        
-        images.shuffle();
-        
-        for (var i = 0; i < images.length; i++) {
-            $('#box').append('<img src="' + images[i] + '" alt="" />')
-        }
-    }
-    </script>
 	   
 	</body>
 </html>
