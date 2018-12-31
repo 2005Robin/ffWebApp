@@ -1,37 +1,5 @@
 <!DOCTYPE html>
 
-<script type='text/javascript'>
-var starttime=0;
-var timer=NULL;
-function startCounter(){
-    var dat=new Date();
-    starttime=dat.getTime();
-    timer = window.setTimeout("updateCounter(2)",100);
-}
-function stopCounter(){
-    window.clearTimeout(timer);
-    updateCounter(1);
-}
-function updateCounter(a)
-{
-    var dat = new Date();
-    now=dat.getTime();
-    var dif=now-starttime;
-    var difstunden=Math.floor(dif/(1000*60*60));
-    dif=dif-(difstunden*(1000*60*60));
-    var difminuten=Math.floor(dif/(1000*60));
-    dif=dif-(difminuten*(1000*60));
-    var difsekunden=Math.floor(dif/(1000));
-    dif=dif-(difsekunden*(1000));
-    var difmili=Math.floor(dif);
-    document.getElementById("ausgabe").innerHTML=difstunden+":"+difminuten+":"+difsekunden+":"+difmili;
-    if(a==2)
-    {
-        timer=window.setTimeout("updateCounter(2)",500);
-    }
-}
-    </script>
-
 <html>
 
     <head>
@@ -84,9 +52,5 @@ function updateCounter(a)
             <center><input type=text name=ausgabe value="" size=50></center>
 	    </form>
 	    
-	    <p id="ausgabe"></p>
-    		<input type="button" onclick="startCounter()" value="start"></input>
-    		<input type="button" onclick="stopCounter()" value="stopp"></input>
-	   
 	</body>
 </html>
