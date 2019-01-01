@@ -28,6 +28,13 @@
                     }
             </script>
 	    
+	    <script language="JavaScript" type="text/javascript">
+		function zufall(){
+		var zahl = Math.round(Math.random() * 350);
+		return zahl;
+		}
+		</script>
+	    
     <body bgcolor="#FFFFFF" onload="JSClock()">
 	    
 	<title>Harry Potter</title>
@@ -53,6 +60,8 @@
 	<script>
         	var userChoice = prompt("Magst du Harry Potter?");
         </script>
+	    
+	    <a href="#" onClick="javascript:alert(zufall())">ZUFALLSZAHL!</a>
 	   
 	</body>
 </html>
