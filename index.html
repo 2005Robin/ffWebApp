@@ -28,62 +28,7 @@
                     }
             </script>
 	    
-	    <script type="text/javascript">
-
-	function getCurrentTime()
-	{
-		var now = new Date();
-		var mySecs = now.getSeconds();
-		var curHour = now.getHours();
-		var curMin = now.getMinutes();
-		var day = now.getDay();
-		var date = now.getDate();
-		var year = now.getFullYear();
-		var month = now.getMonth();
-		var days = new Array();
-			days[0] = "Sonntag";
-			days[1] = "Montag";
-			days[2] = "Dienstag";
-			days[3] = "Mittwoch";
-			days[4] = "Donnerstag";
-			days[5] = "Freitag";
-			days[6] = "Samstag";
-		var suffix = "AM";
-
-			if(mySecs < 10)
-			{
-				mySecs = "0" + mySecs;
-			}
-
-			if(curMin < 10)
-			{
-				curMin = "0" + curMin;
-			}
-
-			if(curHour == 12 && curMin >= 1)
-			{
-				suffix = "PM";
-			}
-
-			if(curHour == 24 && curMin >= 1)
-			{
-				curHour-= 12;
-				suffix = "AM";
-			}
-
-			if(curHour > 12)
-			{
-				curHour-= 12;
-				suffix = "PM";
-			}
-
-document.getElementById('time').innerHTML=(days[day] + ", der " + (month +1) + ". " + date + ". "  + year + "     und es ist " + curHour + "." + curMin + ":" + mySecs + " " + suffix + " Uhr");
-
-}
-
-</script>
-	    
-    <body bgcolor="#FFFFFF" onload="JSClock()" onload="setInterval('getCurrentTime()', 1000);">
+    <body bgcolor="#FFFFFF" onload="JSClock()">
 	    
 	<title>Harry Potter</title>
 	    
@@ -109,7 +54,5 @@ document.getElementById('time').innerHTML=(days[day] + ", der " + (month +1) + "
         	var userChoice = prompt("Magst du Harry Potter?");
         </script>
 	    
-	    <div id="time"></div>
-	   
 	</body>
 </html>
