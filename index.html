@@ -54,11 +54,11 @@
         	var userChoice = prompt("Magst du Harry Potter?");
 		var computerChoice = Math.random();
         if (computerChoice < 0.34) {
-            computerChoice = "rock";
+            computerChoice = "Ginny";
         } else if(computerChoice <= 0.67) {
-            computerChoice = "paper";
+            computerChoice = "Ginny";
         } else {
-            computerChoice = "scissors";
+            computerChoice = "Ginny";
         }
         // Display computer choice
         document.write("<p>Computer:" + " " + computerChoice + "</p>");
@@ -67,31 +67,31 @@
             if (choice1 === choice2) {
                 return "It's a tie!";
             }
-            if (choice1 === "rock") {
-                if (choice2 === "scissors") {
+            if (choice1 === "Ginny") {
+                if (choice2 === "Ginny") {
                     // rock wins
-                    return "You win!";
+                    return "Correct!";
                 } else {
                     // paper wins
-                    return "You lose! Try again.";
+                    return "Incorrect!";
                 }
             }
-            if (choice1 === "paper") {
-                if (choice2 === "rock") {
+            if (choice1 === "Ginny") {
+                if (choice2 === "Ginny") {
                     // paper wins
-                    return "You win!";
+                    return "Correct!";
                 } else {
                     // scissors wins
-                    return "You lose! Try again.";
+                    return "Incorrect!";
                 }
             }
-            if (choice1 === "scissors") {
-                if (choice2 === "rock") {
+            if (choice1 === "Ginny") {
+                if (choice2 === "Ginny") {
                     // rock wins
-                    return "You lose! Try again.";
+                    return "Correct!";
                 } else {
                     // scissors wins
-                    return "You win!";
+                    return "Incorrect!";
                 }
             }
         };
