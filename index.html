@@ -60,45 +60,10 @@
         } else {
             computerChoice = "Ginny";
         }
-        // Display computer choice
-        document.write("<p>Computer:" + " " + computerChoice + "</p>");
-        // Compare user choice vs computer choice
-        var compare = function(choice1,choice2) {
-            if (choice1 === choice2) {
-                return "Correct!";
-            }
-            if (choice1 === "Ginny") {
-                if (choice2 === "Ginny") {
-                    // rock wins
-                    return "Correct!";
-                } else {
-                    // paper wins
-                    return "Incorrect!";
-                }
-            }
-            if (choice1 === "Ginny") {
-                if (choice2 === "Ginny") {
-                    // paper wins
-                    return "Correct!";
-                } else {
-                    // scissors wins
-                    return "Incorrect!";
-                }
-            }
-            if (choice1 === "Ginny") {
-                if (choice2 === "Ginny") {
-                    // rock wins
-                    return "Correct!";
-                } else {
-                    // scissors wins
-                    return "Incorrect!";
-                }
-            }
-        };
-        // Run the compare function
+
         var results = compare(userChoice,computerChoice);
         // Display results
-        document.write("<br><hr><br>" + results);
+        document.write("<br><hr><br>" + computerChoice);
         </script>
 	
        </body>
