@@ -54,9 +54,38 @@
         	var userChoice = prompt("Magst du Harry Potter?");
 	</script>
 	    
-	<input type="button"
-        value="PHP-Datum anzeigen" 
-        onClick="alert('<?php echo date("d.m.Y"); ?>')">
-	   
+	<script type="text/javascript">
+var _alleTage = 0;
+var _heute = new Date();
+var _Tage = new Array(12);
+_Tage[0] = 31;
+_Tage[2] = 31;
+_Tage[3] = 30;
+_Tage[4] = 31;
+_Tage[5] = 30;
+_Tage[6] = 31;
+_Tage[7] = 31;
+_Tage[8] = 30;
+_Tage[9] = 31;
+_Tage[10] = 30;
+_Tage[11] = 31;
+if (Math.round(_heute.getYear()/4) == _heute.getYear()/4) {
+_Tage[1] = 29
+}else{
+_Tage[1] = 28
+}
+if (_heute.getMonth() == 0) {      
+_alleTage = _alleTage + _heute.getDate();
+}else{
+var curMonth = _heute.getMonth();
+for (var count = 1; count <= curMonth; count++) {
+_alleTage = _alleTage + _Tage[count - 1];
+}
+_alleTage = _alleTage + _heute.getDate();
+}
+var woche = Math.round(_alleTage/7);
+document.write("<b>Kalenderwoche:</b> " + woche);
+</script>
+
        </body>
 </html>
