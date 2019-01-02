@@ -54,7 +54,6 @@
 	<script>
         	var userChoice = prompt("Hat Harry Potter in dem Filmen grüne Augen? (Ja,Nein)");
 		if (! userChoice) {
-            // User choice was undefined
          
         var computerChoice = Math.random();
         if (computerChoice < 0.34) {
@@ -68,10 +67,8 @@
             }
             if (choice1 === "Ja") {
                 if (choice2 === "Ja") {
-                    // rock wins
                     return "<p>Du bist ein PotterHead!</p>";
                 } else {
-                    // paper wins
                     return "<p>Leider ist deine Antwort falsch..</p>";
                 }
 
