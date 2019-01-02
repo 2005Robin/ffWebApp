@@ -27,49 +27,7 @@
                     var id=setTimeout("JSClock()",1000);
                     }
 	    </script>
-	    
-	    <script language="JavaScript" type="text/JavaScript">
-var NS4 = (!document.all);
-var IE4 = (document.all);
-var zaehler = 0;
 
-function suchen(suchtext) {
-var txt, i, found;
-if (suchtext == "")
-return false;
-if (NS4) {
-if (!this.find(suchtext))
-while(this.find(suchtext, false, true))
-zaehler++;
-else
-zaehler++;
-if (zaehler == 0) alert(suchtext + " was not found on this page.");
-}
-if (IE4) {
-txt = this.document.body.createTextRange();
-for (i = 0; i <= zaehler && (found = txt.findText(suchtext)) != false; i++) {
-txt.moveStart("character", 1);
-txt.moveEnd("textedit");
-}
-if (found) {
-txt.moveStart("character", -1);
-txt.findText(suchtext);
-txt.select();
-txt.scrollIntoView();
-zaehler++;
-}
-else {
-if (zaehler > 0) {
-zaehler = 0;
-suchen(suchtext);
-}
-else { alert("Der Text \"" + suchtext + "\" wurde nicht gefunden."); }
-}
-}
-return false;
-}
-</script>
-	    
     <body bgcolor="#FFFFFF" onload="JSClock()">
 	    
 	<title>Harry Potter</title>
@@ -94,13 +52,8 @@ return false;
 	    
 	<script>
         	var userChoice = prompt("Magst du Harry Potter?");
+		var userChoice = prompt("");
         </script>
-	    
-	<form name=search onSubmit="return suchen(this.suchtexting.value);">
-        <div align="center">Suchen nach:
-        <input style="border: 1px dotted rgb(0, 0, 0);" id="q" accesskey="s" name=suchtexting type=text size=15 onChange="n = 0;">
-        </div>
-        </form>
 	
        </body>
 </html>
