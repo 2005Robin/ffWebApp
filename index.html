@@ -62,11 +62,11 @@
         // Computer choice
         var computerChoice = Math.random();
         if (computerChoice < 0.34) {
-            computerChoice = "rock";
+            computerChoice = "Ja";
         } else if(computerChoice <= 0.67) {
-            computerChoice = "paper";
+            computerChoice = "Ja";
         } else {
-            computerChoice = "scissors";
+            computerChoice = "Ja";
         }
         // Display computer choice
         document.write("<p>Computer:" + " " + computerChoice + "</p>");
@@ -75,8 +75,8 @@
             if (choice1 === choice2) {
                 return "It's a tie!";
             }
-            if (choice1 === "rock") {
-                if (choice2 === "scissors") {
+            if (choice1 === "Ja") {
+                if (choice2 === "Ja") {
                     // rock wins
                     return "You win!";
                 } else {
