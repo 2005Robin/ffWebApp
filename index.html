@@ -88,6 +88,12 @@
 	<script>
         	var userChoice = prompt("Magst du Harry Potter?")
 		
+		if (! userChoice) {
+            // User choice was undefined
+            document.write("Richtige Antwort");
+        } else {
+            // Display user choice
+            document.write("<p>Deine Antwort" + " " + userChoice + "</p>");
         }
         // Computer choice
         var computerChoice = Math.random();
