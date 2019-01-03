@@ -52,6 +52,61 @@
 	
 	<script>
         	var userChoice = prompt("Magst du Harry Potter?")
+		if (! userChoice) {
+            // User choice was undefined
+            document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
+        } else {
+            // Display user choice
+            document.write("<p>Player 1:" + " " + userChoice + "</p>");
+        }
+        // Computer choice
+        var computerChoice = Math.random();
+        if (computerChoice < 0.34) {
+            computerChoice = "Ja";
+        } else if(computerChoice <= 0.67) {
+            computerChoice = "Ja";
+        } else {
+            computerChoice = "Ja";
+        }
+        // Display computer choice
+        document.write("<p>Computer:" + " " + computerChoice + "</p>");
+        // Compare user choice vs computer choice
+        var compare = function(choice1,choice2) {
+            if (choice1 === choice2) {
+                return "<B>Deine Antwort ist richtig!</B>";
+            }
+            if (choice1 === "Ja") {
+                if (choice2 === "Ja") {
+                    // rock wins
+                    return "Deine Antwort ist richtig!";
+                } else {
+                    // paper wins
+                    return "Deine Antwort ist falsch..";
+                }
+            }
+            if (choice1 === "ja") {
+                if (choice2 === "Ja") {
+                    // paper wins
+                    return "Deine Antwort ist richtig!";
+                } else {
+                    // scissors wins
+                    return "Deine Antwort ist falsch..";
+                }
+            }
+            if (choice1 === "JA") {
+                if (choice2 === "Ja") {
+                    // rock wins
+                    return "Deine Antwort ist richtig!";
+                } else {
+                    // scissors wins
+                    return "Deine Antwort ist falsch..";
+                }
+            }
+        };
+        // Run the compare function
+        var results = compare(userChoice,computerChoice);
+        // Display results
+        document.write("<br><hr><br>" + results);
         </script>
 	    
 	<center>
