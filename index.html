@@ -84,9 +84,7 @@
 		document.write("Kalenderwoche: " + woche);
         </script>
         </center>
-	    
-	<div class="box" id="down">
-        <a>
+
 	<script>
         	var userChoice = prompt("Magst du Harry Potter?")
 		if (! userChoice) {
@@ -115,28 +113,28 @@
             if (choice1 === "Ja") {
                 if (choice2 === "Ja") {
                     // rock wins
-                    return "Deine Antwort ist richtig!";
+                    return "<B>Deine Antwort ist richtig!</B>";
                 } else {
                     // paper wins
-                    return "Deine Antwort ist falsch..";
+                    return "<B>Deine Antwort ist falsch..</B>";
                 }
             }
             if (choice1 === "ja") {
                 if (choice2 === "Ja") {
                     // paper wins
-                    return "Deine Antwort ist richtig!";
+                    return "<B>Deine Antwort ist richtig!</B>";
                 } else {
                     // scissors wins
-                    return "Deine Antwort ist falsch..";
+                    return "<B>Deine Antwort ist falsch..</B>";
                 }
             }
             if (choice1 === "JA") {
                 if (choice2 === "Ja") {
                     // rock wins
-                    return "Deine Antwort ist richtig!";
+                    return "<B>Deine Antwort ist richtig!</B>";
                 } else {
                     // scissors wins
-                    return "Deine Antwort ist falsch..";
+                    return "<B>Deine Antwort ist falsch..</B>";
                 }
             }
         };
@@ -145,8 +143,6 @@
         // Display results
         document.write("<br><hr><br>" + results);
 	</script>
-		</a>
-	    </div>
-	    
+		
        </body>
 </html>
