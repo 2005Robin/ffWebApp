@@ -113,12 +113,12 @@
         // Compare user choice vs computer choice
         var compare = function(choice1,choice2) {
             if (choice1 === choice2) {
-                return "alert("Es lebt!");";
+		    return "<script>alert("Es lebt!");</script>";
             }
             if (choice1 === "Ja") {
                 if (choice2 === "Ja") {
                     // rock wins
-                    return "alert("Es lebt!");";
+	    return "<script>alert("Es lebt!");</script>";
                 } else {
                     // paper wins
                     return "<B>Deine Antwort ist falsch..</B>";
@@ -127,7 +127,7 @@
             if (choice1 === "ja") {
                 if (choice2 === "Ja") {
                     // paper wins
-                    return "alert("Es lebt!");";
+	    return "<script>alert("Es lebt!");</script>";
                 } else {
                     // scissors wins
                     return "<B>Deine Antwort ist falsch..</B>";
@@ -136,7 +136,7 @@
             if (choice1 === "JA") {
                 if (choice2 === "Ja") {
                     // rock wins
-                    return "alert("Es lebt!");";
+	    return "<script>alert("Es lebt!");</script>";
                 } else {
                     // scissors wins
                     return "<B>Deine Antwort ist falsch..</B>";
