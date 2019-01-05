@@ -27,6 +27,14 @@
                     var id=setTimeout("JSClock()",1000);
                     }
 	    </script>
+	    
+	    <script language="javascript">
+    var ret;
+    function returnfunction()
+    {
+        alert(ret);
+    }
+    </script>
 
     <body bgcolor="#FFFFFF" onload="JSClock()">
 	    
@@ -95,32 +103,11 @@
   }
 </script>
 	    
-	    <script type="text/javascript">
-		    $('#box').click(function buttonAction() {
-  $("#dialog-confirm").html("Do you want to do the thing?");
-
-  // Define the Dialog and its properties.
-  $("#dialog-confirm").dialog({
-    resizable: false,
-    modal: true,
-    title: "Do the thing?",
-    height: 250,
-    width: 400,
-    buttons: {
-      "Yes": function() {
-        $(this).dialog('close');
-        alert("Yes, do the thing");
-      },
-      "No": function() {
-        $(this).dialog('close');
-        alert("Nope, don't do the thing");
-      }
-    }
-  });
-});
-
-$('#box').click(buttonAction);
-	    </script>
-	
+	    <form>
+            <label id="QuestionToAsk" name="QuestionToAsk">Here is talked.</label><br />
+            <input type="button" value="Yes" name="yes" onClick="ret=true;returnfunction()" />
+            <input type="button" value="No" onClick="ret=false;returnfunction()" />
+        </form>
+	    
        </body>
 </html>
