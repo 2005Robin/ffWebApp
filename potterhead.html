@@ -85,12 +85,6 @@
         </script>
         </center>
 
-	<script>
-		alert("Es lebt!");
-		alert(location.hostname);
-		confirm("Press a button!");
-	</script>
-
 <p id="demo"></p>
 
 <script>
@@ -103,7 +97,7 @@ function myFunction() {
 }
 </script>
 	
-	<script>
+	<swcript>
         	var userChoice = prompt("Magst du Harry Potter?")
 		
 		if (! userChoice) {
@@ -115,67 +109,8 @@ function myFunction() {
         }
         // Computer choice
         var computerChoice = Math.random();
-        if (computerChoice < 0.34) {
-            computerChoice = "Ja";
-        } else if(computerChoice <= 0.67) {
-            computerChoice = "Ja";
-        } else {
-            computerChoice = "Ja";
-        }
-        // Display computer choice
-        document.write("<p>Computer:" + " " + computerChoice + "</p>");
-        // Compare user choice vs computer choice
-        var compare = function(choice1,choice2) {
-            if (choice1 === choice2) {
-		    return "<B>Deine Antwort ist richtig!</B>";
-            }
-            if (choice1 === "Ja") {
-                if (choice2 === "Ja") {
-                    // rock wins
-	            return "<B>Deine Antwort ist richtig!</B>";
-                } else {
-                    // paper wins
-                    return "<B>Deine Antwort ist falsch..</B>";
-                }
-            }
-            if (choice1 === "ja") {
-                if (choice2 === "Ja") {
-                    // paper wins
-	            return "<B>Deine Antwort ist richtig!</B>";
-                } else {
-                    // scissors wins
-                    return "<B>Deine Antwort ist falsch..</B>";
-                }
-            }
-            if (choice1 === "JA") {
-                if (choice2 === "Ja") {
-                    // rock wins
-	    return "<B>Deine Antwort ist richtig!</B>";
-                } else {
-                    // scissors wins
-                    return "<B>Deine Antwort ist falsch..</B>";
-                }
-            }
-        };
-        // Run the compare function
-        var results = compare(userChoice,computerChoice);
-        // Display results
-        document.write("<br><hr><br>" + results);
-	</script>
-	    
+
 	    <hr color="#000000">
-	    
-	<script type='text/javascript'> <!--
-        function passwort( ) { 
-        location.href=document.pwort.pw.value + ".html"; 
-        }
-        //-->
-        </script>
-        <form name="pwort" action="javascript:passwort();">
-        Passwort eingeben: 
-        <input type="PASSWORD" name="pw" size="10">
-        <input type="button" value="OK" onclick="passwort()" name="button">
-        </form>
-	 
+	
        </body>
 </html>
