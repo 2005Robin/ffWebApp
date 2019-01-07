@@ -24,10 +24,15 @@
 	<script>
 		alert("Welcome back!");
 	</script>
-	    
-	<p align="justify">Wilkommen bei dieser Harry Potter App! Bei dieser App kannst du Informationen ueber Personen der 
-	    Harry Potter Welt erhalten! Um diese Funktion nutzen zu konnen, musst du unten bei der Suchfunktion den 
-	    Vornamen deiner Person eingeben.</p>
+	
+	<script>
+		var person = prompt("Bitte gib deinen Benutzernamen ein!")
+		if (person !=null) {
+			document.getElementById("Demo").innertHTML =
+	   	 "Wilkommen " + person + "! bei dieser Harry Potter App! Bei dieser App kannst du Informationen ueber Personen der 
+	   	 Harry Potter Welt erhalten! Um diese Funktion nutzen zu konnen, musst du unten bei der Suchfunktion den 
+	   	 Vornamen deiner Person eingeben"
+	</script>
  
 	<script type='text/javascript'> <!--
         function passwort( ) { 
