@@ -25,8 +25,15 @@
 		alert("Welcome back!");
 	</script>
 	
+	<button onclick="myFunction()">Benutzername</button>
+		
 	<script>
+		function myFunction() {
 		var person = prompt("Bitte gib deinen Benutzernamen ein!","Harry Potter");
+			if (person != null) {
+				document.getElementById("demo").innerHTML ="Hallo " + person + "! Wilkommen zurueck!";
+			}
+		}
         </script>
 		
 	<p>"Hallo " + person + "! Wilkommen zurück!";</p>
