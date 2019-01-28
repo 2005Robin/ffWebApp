@@ -12,4 +12,8 @@ body{
 #box1 {
     clear:left;
     float:left;
-    
+    background-color:#FFFFFF;
+    margin: 2% 2% 2% 0;
+    padding:2%;
+    width: 96%;
+}
