@@ -9,7 +9,7 @@ body{
     background-color: #FFFFFF
 }
 
-div {
-    width: 98%
-    background-color: #CCCCCC
-}
+#box1 {
+    clear:left;
+    float:left;
+    
