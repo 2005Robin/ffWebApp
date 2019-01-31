@@ -5,6 +5,30 @@
     <head>
 	    <title>Harry Potter</title>
 	    <link rel="stylesheet" href="css/style.css">
+	    
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		.alert {
+ 		 padding: 20px;
+ 		 background-color: #f44336;
+  		color: white;
+		}
+
+		.closebtn {
+		  margin-left: 15px;
+  		color: white;
+  		font-weight: bold;
+  		float: right;
+  		font-size: 22px;
+ 		 line-height: 20px;
+  		cursor: pointer;
+  		transition: 0.3s;
+		}
+
+		.closebtn:hover {
+  		color: black;
+		}
+		</style>
 	</head>
 	
 	<body>
@@ -19,6 +43,12 @@
 	    <center><B>HARRY POTTER HILFSMITTEL</B></center>
 	    
         <hr color="#000000">
+		
+	<div class="alert">
+  		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<center>Wilkommen zurück!</center>
+	</div>
+
 	
 		<center><p align="justify">Willkommen in dieser Harry Potter franz&ouml;sisch App. In dieser App hast du die M&ouml;glichkeit 
 	unten in der Suchleiste ein franz&ouml;siches Verb einzugeben und darauf hin die Kunjunktion zu bekommen!</p></center>
