@@ -37,60 +37,6 @@
         <input type="button" value="OK" onclick="passwort()" name="button">
 		</form>
 		</center>
-		
-	<script>
-        var userChoice = document.getElementById("userChoice").value;
-
-        if (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors"){
-            alert("Your choice was not rock, paper or scissors");
-            userChoice = prompt("Do you choose rock, paper or scissors?");
-        }
-        var computerChoice = Math.random();
-        if (computerChoice < 0.34) {
-            computerChoice = "rock";
-        } else if(computerChoice <= 0.67) {
-            computerChoice = "paper";
-        } else {
-            computerChoice = "scissors";
-        }
-
-        var compare = function(choice1, choice2) {
-            if (choice1 == choice2) {
-                return "The result is a tie!";
-            } else if (choice1 == "rock") {
-                if (choice2 == "scissors") {
-                    return "Rock wins";
-                } else {
-                    return "Paper wins";
-                }
-            } else if (choice1 == "paper") {
-                if (choice2 == "rock") {
-                    return "Paper wins";
-                } else {
-                    return "Scissors wins";
-                }
-            } else if (choice1 == "scissors") {
-                if (choice2 == "paper") {
-                    return "Scissors win";
-                } else {
-                    return "Rock wins";
-                }
-            }
-        }
-
-        function Run() {
-            document.getElementById("pcc").innerHTML = "Computer: " + computerChoice;
-            document.getElementById("result").innerHTML = compare(userChoice, computerChoice);
-        }
-    </script>
-    <main>
-        <h2>Choose between rock, paper or scissors: </h2>
-        <input id="userChoice">
-        <button onClick="Run()">Choose</button>
-        <p id="pcc"></p>
-        <p id="result"></p>
-    </main>
-
 	
        </body>
 </html>
