@@ -88,44 +88,44 @@
 
     <script type='text/javascript'>
 	function game() {
-        var userChoice = prompt("Do you choose rock, paper or scissors?");
+        var userChoice = prompt("Wie viele B&uuml;cher von Harry Potter gibt es? 6, 7 oder 8");
         if (! userChoice) {
             document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
         } else {
-            document.write("<p>Player 1:" + " " + userChoice + "</p>");
+            document.write("<p>Harry Potter Fan:" + " " + userChoice + "</p>");
         }
         var computerChoice = Math.random();
 	if (computerChoice < 0.34) {
-		 computerChoice = "rock";
+		 computerChoice = "7";
 	 } else if(computerChoice <= 0.67) {
-		computerChoice = "paper";
+		computerChoice = "7";
 	 } else {
-		computerChoice = "scissors";
+		computerChoice = "7";
 	 }
         document.write("<p>Computer:" + " " + computerChoice + "</p>");
         var compare = function(choice1,choice2) {
             if (choice1 === choice2) {
                 return "It's a tie!";
             }
-            if (choice1 === "rock") {
-                if (choice2 === "scissors") {
+            if (choice1 === "7") {
+                if (choice2 === "7") {
                     return "You win!";
                 } else {       
-                    return "You lose! Try again.";
+                    return "Deine Antwort ist richtig!";
                 }
             }
-            if (choice1 === "paper") {
-                if (choice2 === "rock") {
-                    return "You win!";
+            if (choice1 === "6") {
+                if (choice2 === "7") {
+                    return "Deine Antwort ist falsch!";
                 } else {              
-                    return "You lose! Try again.";
+                    return "Deine Antwort ist falsch";
                 }
             }
-            if (choice1 === "scissors") {
-                if (choice2 === "rock") {
-                    return "You lose! Try again.";
+            if (choice1 === "8") {
+                if (choice2 === "7") {
+                    return "Deine Antwort ist falsch!";
                 } else {               
-                    return "You win!";
+                    return "Deine Antwort ist falsch";
                 }
             }
         };
