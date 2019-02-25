@@ -86,7 +86,8 @@
 
 
 
-    <script>
+    <script type='text/javascript'>
+	function game() {
         var userChoice = prompt("Do you choose rock, paper or scissors?");
         if (! userChoice) {
             document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
@@ -130,6 +131,7 @@
         };
         var results = compare(userChoice,computerChoice);
         document.write("<br><hr><br>" + results);
+    }
     </script>
 
 
