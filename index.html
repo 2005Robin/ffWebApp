@@ -29,13 +29,12 @@
   		color: black;
 		}
 			
-		 *{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}::selection{background:#fb9fe5;text-shadow:none}a{color:#0088CC;text-decoration:none;outline:0}a:hover{color:#005580}a img{border:none}img{max-width:100%}html{font-size:100%}body{padding:5%;font:300 1.25em/1.6 monospace;background:#fff;color:#000;}h1{font-family:"Helvetica Neue",sans-serif;line-height:1;font-weight:300;margin-bottom:1em;}.game{padding:2em;background:#eee;}
-
-    </style>
-		</style>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width">
+		
 	</head>
 	
-	<body onload="3mal()">
+	<body>
 	    
 	<center><img src="hp\hp.svg" width="360px"></center>
 	    
@@ -71,23 +70,13 @@
         <input type="button" value="OK" onclick="passwort()" name="button">
 		</form>
 		</center>
-		
-	<script>
-		function myFunction() {
-			var person = prompt("Plaease enter your name","Harry Potter");
-			if (person != null) {
-				document.getElementById("demo").innert.HTML =
-					"Hello " + person + "!";
-			}
-		}
-	<script>
+	
 		
 	<div class="game">
 
 
 
     <script type='text/javascript'>
-	function game() {
         var userChoice = prompt("Wie viele B&uuml;cher von Harry Potter gibt es? 6, 7 oder 8");
         if (! userChoice) {
             document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
@@ -131,7 +120,6 @@
         };
         var results = compare(userChoice,computerChoice);
         document.write("<br><hr><br>" + results);
-    }
     </script>
 
 
