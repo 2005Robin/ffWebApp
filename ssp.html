@@ -19,55 +19,55 @@
 
     <script>
         // User choice
-        var userChoice = prompt("Do you choose rock, paper or scissors?");
+        var userChoice = prompt("Nimmst du Schere, Stein oder Papier?");
         if (! userChoice) {
             // User choice was undefined
-            document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
+            document.write("<p>Du hast keine Antwort ausgewählt</p>");
         } else {
             // Display user choice
-            document.write("<p>Player 1:" + " " + userChoice + "</p>");
+            document.write("<p>Du:" + " " + userChoice + "</p>");
         }
         // Computer choice
         var computerChoice = Math.random();
         if (computerChoice < 0.34) {
-            computerChoice = "rock";
+            computerChoice = "Stein";
         } else if(computerChoice <= 0.67) {
-            computerChoice = "paper";
+            computerChoice = "Papier";
         } else {
-            computerChoice = "scissors";
+            computerChoice = "Schere";
         }
         // Display computer choice
         document.write("<p>Computer:" + " " + computerChoice + "</p>");
         // Compare user choice vs computer choice
         var compare = function(choice1,choice2) {
             if (choice1 === choice2) {
-                return "It's a tie!";
+                return "Unentschieden..";
             }
-            if (choice1 === "rock") {
-                if (choice2 === "scissors") {
+            if (choice1 === "Stein") {
+                if (choice2 === "Schere") {
                     // rock wins
-                    return "You win!";
+                    return "Du hast gewonnen!";
                 } else {
                     // paper wins
-                    return "You lose! Try again.";
+                    return "Du hast verloren!";
                 }
             }
-            if (choice1 === "paper") {
-                if (choice2 === "rock") {
+            if (choice1 === "Papier") {
+                if (choice2 === "Stein") {
                     // paper wins
-                    return "You win!";
+                    return "Du hast gewonnen!";
                 } else {
                     // scissors wins
-                    return "You lose! Try again.";
+                    return "Du hast verloren!";
                 }
             }
-            if (choice1 === "scissors") {
-                if (choice2 === "rock") {
+            if (choice1 === "Schere") {
+                if (choice2 === "Stein") {
                     // rock wins
-                    return "You lose! Try again.";
+                    return "Du hast verloren!";
                 } else {
                     // scissors wins
-                    return "You win!";
+                    return "Du hast gewonnen!";
                 }
             }
         };
