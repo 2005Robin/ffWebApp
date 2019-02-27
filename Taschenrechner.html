@@ -1,278 +1,93 @@
-<!DOCTYPE html>
-
 <html>
-<head>
-  <style>
-    /*helper mixin*/
-@mixin animation($name){
-  @-webkit-keyframes #{$name}{
-    @content;
-  }
-  @-moz-keyframes #{$name}{
-    @content;
-  }
-  @-o-keyframes #{$name}{
-    @content;
-  }
-  @keyframes #{$name}{
-    @content;
-  }
-}
-
-/*base*/
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html,body{
-  width:100%;
-  height:100%;
-}
-
-body{
-  background:#76b900;
-  text-align:center;
-  font-family: 'Source Code Pro', ;
-}
-
-.wrapper{
-  width: 100%;
-  height: 100%;
-
- &:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
-/*taschenrechner*/
- }
-}
-
-#taschenrechner{
-  width:250px;
-  background:#fff;
-  padding:10px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.ui-draggable-dragging{
-  box-shadow:0 0 4em 0 #fff;
-}
-
-#display{
-  width:100%;
-  height:50px;
-  line-height:50px;
-  background:#eee;
-  position:relative;
-}
-
-#display .inner{
-  width:100%;
-  text-align:right;
-  overflow:auto;
-  padding-right:1em;
-  position:absolute;
-  right:0;
-  top:0;
   
+  <head>
+    <style>
+      #calc-contain{
+  position: relative;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 12px;
+  margin: 0px auto;
+  padding: 20px 20px 100px 20px;
 }
-.btn{
-  background:#848484;
-  color:#fff;
-  padding:10px;
-  width:25%;
-  text-align:center;
+#agh{
+  position: relative;
+  float: right;
+  margin-top: 15px;
+}
+#agh p{
+  font-size: 20px;
+  font-weight: 900;
+}
+input[type=button] {
+  background: lightGray;
+  width: 20%;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 7px;
+  margin-left: 13px;
+  margin-top: 10px;
+}
+input[type=button]:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+input[type=button]:hover {
+  background-color: #003300;
+  color: white;
+}
+
+input[type = text] {
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 5px auto;
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 4px 0px 12px black inset;
+}
+    </style>
+  </head>
   
-  &:first-child{
-    margin-left:0;
-  }
-  &:last-child{
-    margin-right:0;
-  }
-}
-
-table{
-  width:100%;
-  background:#eee;
-  margin-top:5px;
-}
-
-td{
-  padding:15px 10px;
-  text-align:center;
-  background:#333;
-  color:#fff;
-  position:relative;
-  cursor:pointer;
-  user-select:none;
-}
-
-.error{
-  &:after{
-    content:'';
-    display:block;
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    background:red;
-    animation:error 1s both;
-  }
+  <body>
+    <div id='calc-contain'>
   
+          <form name="calculator">
+            
+            <input type="text" name="answer" />
+            <br>
+            
+            <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+            <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+            <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+            <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+            <br/>
+            
+            <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+            <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+            <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+            <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+            </br>
+          
+            <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+            <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+            <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+            <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
+            </br>
+        
+            <input type="button" value=" c " onclick="calculator.answer.value = ''" />
+            <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+            <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+            <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
+            </br>
   
-}
-
-.clear{
-  &:after{
-    content:'';
-    display:block;
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    animation:clear 1s both;
-    background:rgb(98, 212, 98);
-  }
-}
-
-
-
-@include animation(error){
-  0%{
-    background:rgba(255,10,0,.5);
-  }
-  100%{
-    background:transparent;
-  }
-}
-
-@include animation(clear){
-  0%{
-    background:rgb(98, 212, 98);
-  }
-  100%{
-    background:transparent;
-  }
-}
-  </style>
-</head>
-<body>
+    
+          </form>
+          <div id="agh">
+            <p>Adrian Gheorghe Calc
+          </div>
+        </div>
+  </body>
   
-  <a href="index.html"><center><img src="hp\hp.svg" width="360px"></center></a>
-  
-  <hr color="#000000">
-  
-  <div class="wrapper">
-  <div id="taschenrechner">
- <div id="display">
-   <div class="inner">0</div>
- </div>
-
- <div id="ziffernblock">
-   <table>
-     <tr>
-       <td class="btn func-plus" data-func="+">+</td>
-       <td class="btn func-minus" data-func="-">-</td>
-       <td class="btn func-mal" data-func="*">*</td>
-       <td class="btn func-durch" data-func="/">/</td>
-     </tr>
-   </table>
-  <table>
-   <tr>
-       <td data-ziffer="1">1</td>
-       <td data-ziffer="2">2</td>
-       <td data-ziffer="3">3</td>
-     </tr>
-     <tr>
-       <td data-ziffer="4">4</td>
-       <td data-ziffer="5">5</td>
-       <td data-ziffer="6">6</td>
-     </tr>
-     <tr>
-       <td data-ziffer="7">7</td>
-       <td data-ziffer="8">8</td>
-       <td data-ziffer="9">9</td>
-     </tr>
-     <tr>
-       <td class="func-c" data-func="c">c</td>
-       <td data-ziffer="0">0</td>
-       <td class="func-sum" data-func="=">=</td>
-     </tr>
-   </table>
- </div>
-</div>
-</div>
-  
-<script type="text/javascript">
-  var $rechner = $('#taschenrechner'),
-    $display = $('#display .inner'),
-    $delete = $('.func-c'),
-    //Funktionen
-
-    $plus = $('.func-plus'),
-    $minus = $('.func-minus'),
-    $mal = $('.func-mal'),
-    $durch = $('.func-durch'),
-    $sum = $('.func-sum');
-
-$rechner.draggable({cursor:'move'});
-
-$('td[data-ziffer]').click(function(){
-  $currentFunc = false;
-    var $ziffer = $(this).data('ziffer');
-  if($display.html()==='0'){
-    $display.text($ziffer);
-  }
-  else{
-    $display.append($ziffer);
-  }    
-});
-
-var $currentFunc = false;
-
-$('.btn').click(function(){
-  
-  var $func = $(this).data('func');
-  if(!$currentFunc){
-    $display.append(' '+$func+' ');
-  }
-  else{
-    noticeHandler($(this),'error');
-  }
-  $currentFunc = true;
-});
-
-var noticeHandler = function(el,$class){
-     el.addClass($class);
-     newone =el.clone(true);     
-     el.before(newone);        
-     el.remove();
-}
-
-$sum.click(function(){
-  var $aufgabe = $display.text();
-  var $helper = $aufgabe.split(' ');
-  var $last = $helper.length-1;
-  if($helper[$last]==='' ||$aufgabe ==='0'){
-     noticeHandler($(this),'error');
-  }
-  else{
-    var $ergebnis =eval($aufgabe)
-    $display.text($ergebnis);
-  }
-})
-
-$delete.click(function(){
-  $display.text('0');
-  noticeHandler($(this),'clear');
-})
-</script>
-</body>
 </head>
