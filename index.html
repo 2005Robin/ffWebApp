@@ -29,6 +29,18 @@
   		color: black;
 		}
 	    </style>
+	    
+	    <script type="text/javascript">
+<!--
+function passw()
+{
+if(document.f1.pass.value=="Passwort")
+document.location.href="1.html";
+else
+alert("Falsches Passwort");
+}
+//-->
+	    
 	</head>
 	
 	<body>
@@ -100,6 +112,13 @@ window.open('Datei.htm', 'Titel', 'height=500,width=500');
 <font face="Times New Roman"><input TYPE="BUTTON" VALUE=" Login" onClick="dialog3()"></font></left></p>
 </div>
 </form> 
+
+Um hier weiterzukommen m&uuml;ssen sie sich einloggen!</br>
+Geben sie bitte hier ihr Passwort ein.</br>
+<form name="f1">
+<input type="password" name="pass" size="15">
+</form>
+<h3>[url="javascript:passw()"]Weiter[/url]</h3>
 		
        </body>
 </html>
