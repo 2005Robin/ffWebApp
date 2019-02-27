@@ -164,7 +164,10 @@ td{
   </style>
 </head>
 <body>
-  <center><img src="hp\hp.svg" width="360px"></center>
+  
+  <a href="index.html"><center><img src="hp\hp.svg" width="360px"></center></a>
+  
+  <hr color="#000000">
   
   <div class="wrapper">
   <div id="taschenrechner">
@@ -207,7 +210,7 @@ td{
 </div>
 </div>
   
-<style>
+<script type="text/javascript">
   var $rechner = $('#taschenrechner'),
     $display = $('#display .inner'),
     $delete = $('.func-c'),
@@ -270,6 +273,6 @@ $delete.click(function(){
   $display.text('0');
   noticeHandler($(this),'clear');
 })
-</style>
+</script>
 </body>
 </head>
