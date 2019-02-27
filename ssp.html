@@ -68,6 +68,33 @@
                 } else {
                     // scissors wins
                     return "Du hast gewonnen!";
+                }               
+             }
+            if (choice1 === "stein") {
+                if (choice2 === "Schere") {
+                    // rock wins
+                    return "Du hast gewonnen!";
+                } else {
+                    // paper wins
+                    return "Du hast verloren!";
+                }
+             }
+            if (choice1 === "papier") {
+                if (choice2 === "Stein") {
+                    // paper wins
+                    return "Du hast gewonnen!";
+                } else {
+                    // scissors wins
+                    return "Du hast verloren!";
+                }
+             }
+            if (choice1 === "schere") {
+                if (choice2 === "Stein") {
+                    // rock wins
+                    return "Du hast verloren!";
+                } else {
+                    // scissors wins
+                    return "Du hast gewonnen!";
                 }
             }
         };
