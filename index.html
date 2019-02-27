@@ -78,6 +78,55 @@
  		alert("Bei Ihnen ist es jetzt " + StdAusgabe + "." + MinAusgabe + " Uhr");
 		//-->
 	</script>
+		
+	<script>
+
+    var computerChoice = math.random();
+    var userChoice = null;
+
+    if (computerChoice < .33) {
+        computerChoice == "rock";
+    } else if (computerChoice < .66) {
+        computerChoice == "paper";
+    } else {
+        computerChoice == "scissors";   
+    };
+
+   function convertUserChoice() {
+        $('#rock').click(function() {
+            userChoice == "rock";
+        });
+        $('#paper').click(function() {
+            userChoice == "paper";
+        });
+        $('#scissors').click(function() {
+            userChoice == "scissors";
+        });
+    };
+
+    if (userChoice == computerChoice) {
+        alert ("Tie!");
+    } else if (userChoice == "rock") {
+        if (computerChoice == "scissors") {
+            alert ("You win!");
+        } else {
+            alert ("You lose.");
+        };
+    } else if (userChoice == "paper") {
+        if (computerChoice == "rock") {
+            alert ("You win!");
+        } else {
+            alert ("You lose.");
+        };
+    } else if (userChoice == "scissors") {
+        if (computerChoice == "paper") {
+            alert ("You win!");
+        } else {
+            alert ("You lose");
+        };
+    };
+
+</script>
 	
        </body>
 </html>
