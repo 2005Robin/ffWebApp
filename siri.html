@@ -9,24 +9,25 @@
 
 <body>
   
-  <button onclick="myFunction()"><center><img src="hp\hp.svg" width="360px"></center></button>
+  <center><img src="hp\hp.svg" width="360px"></center>
   
   <script>
     function myFunction() {
-    alert("<b>Was kannst du mich fragen?</b><br>-Wie geht es dir?");
+    alert("Das kannst du mich fragen:
+          Wie geht es dir?");
     }
   </script>
 
   
   <script>
         // User choice
-        var userChoice = prompt("Do you choose rock, paper or scissors?");
+        var userChoice = prompt("Hallo, was ist deine Frage?");
         if (! userChoice) {
             // User choice was undefined
-            document.write("<p>Player 1, you cheated! Refresh this screen and fight like a man.</p>");
+            document.write("<p>undefined</p>");
         } else {
             // Display user choice
-            document.write("<p>Player 1:" + " " + userChoice + "</p>");
+            document.write("<p>Deine Frage:" + " " + userChoice + "</p>");
         }
         // Computer choice
         var computerChoice = Math.random();
@@ -42,12 +43,12 @@
         // Compare user choice vs computer choice
         var compare = function(choice1,choice2) {
             if (choice1 === choice2) {
-                return "It's a tie!";
+                return "Undefined";
             }
-            if (choice1 === "rock") {
+            if (choice1 === "Wie geht es dir?") {
                 if (choice2 === "Siri") {
                     // rock wins
-                    return "o";
+                    return "Mir geht es gut! Wie geht es dir?";
                 } else {
                     // paper wins
                     return "You lose! Try again.";
@@ -158,6 +159,8 @@
         // Display results
         document.write("<br><hr><br>" + results);
     </script>
+  
+  <button onclick="myFunction()">Help</button>
 
 </div>
 </body>
