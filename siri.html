@@ -23,9 +23,9 @@
         // Computer choice
         var computerChoice = Math.random();
         if (computerChoice < 0.34) {
-            computerChoice = "rock";
+            computerChoice = "scissors";
         } else if(computerChoice <= 0.67) {
-            computerChoice = "paper";
+            computerChoice = "scissors";
         } else {
             computerChoice = "scissors";
         }
@@ -39,7 +39,7 @@
             if (choice1 === "rock") {
                 if (choice2 === "scissors") {
                     // rock wins
-                    return "You win!";
+                    return "alert("Hallo")";
                 } else {
                     // paper wins
                     return "You lose! Try again.";
@@ -61,6 +61,24 @@
                 } else {
                     // scissors wins
                     return "You win!";
+                }
+              }
+            if (choice1 === "rock") {
+                if (choice2 === "scissors") {
+                    // rock wins
+                    return "You win!";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+            }
+            if (choice1 === "rock") {
+                if (choice2 === "scissors") {
+                    // rock wins
+                    return "You win!";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
                 }
             }
         };
