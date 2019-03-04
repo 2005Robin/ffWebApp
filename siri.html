@@ -15,7 +15,7 @@
   
   <script>
     function myFunction() {
-    alert("Das kannst du mich fragen: Wie geht es dir? Was ist deine Lieblingsfarbe? Wie alt bist du? Was ist dein Lieblingsspiel? Was ist dein Lieblingsbuch? Was ist dein Lieblingsfilm?Was ist dein Lieblingslied? Warst du gerne in der Schule? Hast du eine Freundin? Kannst du den Zauberwürfel lösen? Was gibt 0:0? Was ist dein Lieblingsemoji?");
+    alert("Das kannst du mich fragen: Wie geht es dir? Was ist deine Lieblingsfarbe? Wie alt bist du? Was ist dein Lieblingsspiel? Was ist dein Lieblingsbuch? Was ist dein Lieblingsfilm?Was ist dein Lieblingslied? Warst du gerne in der Schule? Hast du eine Freundin? Kannst du den Zauberwürfel lösen? Was gibt 0:0? Was ist dein Lieblingsemoji? Wieviele Bücher von Harry Potter gibt es? Wieviele Filme von Harry Potter gibt es? Wen von Harry Potter magst du am liebsten?");
     }
   </script>
 
@@ -151,6 +151,42 @@
                     return "Das ist mein Lieblingsemoji: :-)";
                 } else {
                     // scissors wins
+                    return "You lose! Try again.";
+                }
+              }
+            if (choice1 === "Wieviele Bücher von Harry Potter gibt es?") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "Es gibt insgesamt 7 Bücher.";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+              }
+            if (choice1 === "Wieviele Filme von Harry potter gibt es?") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "Es gibt 8 Filme von Harry Potter.";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+              }
+            if (choice1 === "Wen von Harry Potter magst du am liebsten?") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "Mir geht es gut! Wie geht es dir?";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+              }
+            if (choice1 === "Home") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "<a href="index.html">Home</a>";
+                } else {
+                    // paper wins
                     return "You lose! Try again.";
                 }
             }
