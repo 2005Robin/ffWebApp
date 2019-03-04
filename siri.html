@@ -15,7 +15,7 @@
   
   <script>
     function myFunction() {
-    alert("Das kannst du mich fragen: Wie geht es dir? Was ist deine Lieblingsfarbe? Wie alt bist du? Was ist dein Lieblingsspiel? Was ist dein Lieblingsbuch? Was ist dein Lieblingsfilm?Was ist dein Lieblingslied? Warst du gerne in der Schule? Hast du eine Freundin? Kannst du den Zauberwürfel lösen? Was gibt 0:0? Was ist dein Lieblingsemoji? Wieviele Bücher von Harry Potter gibt es? Wieviele Filme von Harry Potter gibt es? Wen von Harry Potter magst du am liebsten? Wen hasst du von Harry Potter am meisten?");
+    alert("Das kannst du mich fragen: Wie geht es dir? Was ist deine Lieblingsfarbe? Wie alt bist du? Was ist dein Lieblingsspiel? Was ist dein Lieblingsbuch? Was ist dein Lieblingsfilm?Was ist dein Lieblingslied? Warst du gerne in der Schule? Hast du eine Freundin? Kannst du den Zauberwürfel lösen? Was gibt 0:0? Was ist dein Lieblingsemoji? Wieviele Bücher von Harry Potter gibt es? Wieviele Filme von Harry Potter gibt es? Wen von Harry Potter magst du am liebsten? Wen hasst du von Harry Potter am meisten? Wer sagt Harry Potter, dass er ein Zauberer ist? Wie heisst der Vater von Harry Potter? Wie heisst die Mutter von Harry Potter?");
     }
   </script>
 
@@ -185,6 +185,33 @@
                 if (choice2 === "Siri") {
                     // rock wins
                     return "Ich mag Belatrix nicht.";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+               }
+            if (choice1 === "Wer sagt Harry Potter, dass er ein Zauberer ist?") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "Rubeus Hagrid sagt es ihm.";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+             }
+            if (choice1 === "Wie heisst der Vater von Harry Potter?") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "Er heisst James Potter.";
+                } else {
+                    // paper wins
+                    return "You lose! Try again.";
+                }
+             }
+            if (choice1 === "Wie heisst die Mutter von Harry Potter?") {
+                if (choice2 === "Siri") {
+                    // rock wins
+                    return "Sie heisst Lily Potter";
                 } else {
                     // paper wins
                     return "You lose! Try again.";
