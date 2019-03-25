@@ -1,245 +1,461 @@
 <!DOCTYPE html>
 
+
+
 <html>
 
+
+
 <head>
+
   <meta charset="utf-8" />
+
   <meta name="viewport" content="width=device-width">
+
 </head>
 
+
+
 <body>
-  
-  <a href="siri.html"><center><img src="hp\hp.svg" width="360px"></center></a>
-  
-  <hr color="#000000">
-  
-  <script>
-    function myFunction() {
-    alert("Das kannst du mich fragen: Wie geht es dir? Was ist deine Lieblingsfarbe? Wie alt bist du? Was ist dein Lieblingsspiel? Was ist dein Lieblingsbuch? Was ist dein Lieblingsfilm?Was ist dein Lieblingslied? Warst du gerne in der Schule? Hast du eine Freundin? Kannst du den Zauberwürfel lösen? Was gibt 0:0? Was ist dein Lieblingsemoji? Wieviele Bücher von Harry Potter gibt es? Wieviele Filme von Harry Potter gibt es? Wen von Harry Potter magst du am liebsten? Wen hasst du von Harry Potter am meisten? Wer sagt Harry Potter, dass er ein Zauberer ist? Wie heisst der Vater von Harry Potter? Wie heisst die Mutter von Harry Potter?");
-    }
-  </script>
 
   
+
+  <a href="siri.html"><center><img src="hp\hp.svg" width="360px"></center></a>
+
+  
+
+  <hr color="#000000">
+
+  
+
   <script>
+
+    function myFunction() {
+
+    alert("Das kannst du mich fragen: Wie geht es dir? Was ist deine Lieblingsfarbe? Wie alt bist du? Was ist dein Lieblingsspiel? Was ist dein Lieblingsbuch? Was ist dein Lieblingsfilm?Was ist dein Lieblingslied? Warst du gerne in der Schule? Hast du eine Freundin? Kannst du den Zauberwürfel lösen? Was gibt 0:0? Was ist dein Lieblingsemoji? Wieviele Bücher von Harry Potter gibt es? Wieviele Filme von Harry Potter gibt es? Wen von Harry Potter magst du am liebsten? Wen hasst du von Harry Potter am meisten? Wer sagt Harry Potter, dass er ein Zauberer ist? Wie heisst der Vater von Harry Potter? Wie heisst die Mutter von Harry Potter?");
+
+    }
+
+  </script>
+
+
+
+  
+
+  <script>
+
         // User choice
+
         var userChoice = prompt("Hallo, was ist deine Frage?");
+
         if (! userChoice) {
+
             // User choice was undefined
+
             document.write("<p>undefined</p>");
+
         } else {
+
             // Display user choice
+
             document.write("<p>Deine Frage:" + " " + userChoice + "</p>");
+
         }
+
         // Computer choice
+
         var computerChoice = Math.random();
+
         if (computerChoice < 0.34) {
+
             computerChoice = "Siri";
+
         } else if(computerChoice <= 0.67) {
+
             computerChoice = "Siri";
+
         } else {
+
             computerChoice = "Siri";
+
         }
+
         // Display computer choice
+
         document.write("<p>Computer:" + " " + computerChoice + "</p>");
+
         // Compare user choice vs computer choice
+
         var compare = function(choice1,choice2) {
+
             if (choice1 === choice2) {
+
                 return "Undefined";
+
             }
+
             if (choice1 === "Wie geht es dir?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Mir geht es gut! Wie geht es dir?";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
             }
+
             if (choice1 === "Was ist deine Lieblingsfarbe?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Ich mag blau am liebsten.";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
             }
+
             if (choice1 === "Wie alt bist du?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Ich bin 21 Jahre alt.";
+
                 } else {
+
                     // scissors wins
+
                     return "You win!";
+
                 }
+
              }
+
             if (choice1 === "Was ist dein Lieblingsspiel?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Ich habe UNO am liebsten";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Was ist dein Lieblingsbuch?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Harry Potter ist mein Lieblingsbuch.";
+
                 } else {
+
                     // scissors wins
+
                     return "You win!";
+
                 }
+
              }
+
             if (choice1 === "Was ist dein Lieblingsfilm?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Mein Lieblingsfilm ist The Greatest Showman.";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Was ist dein Lieblingslied?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Never Enough ist mein Lieblingslied.";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
              }
+
             if (choice1 === "Warst du gerne in der Schule?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Ja, ich war gerne in der Schule.";
+
                 } else {
+
                     // scissors wins
+
                     return "You win!";
+
                 }
+
              }
+
             if (choice1 === "Hast du eine Freundin?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Nein, ich bin noch single.";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Kannst du den Zauberwürfel lösen.") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Ja, das kan ich.";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Was gibt 0:0?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Natürlich 0.";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Was ist dein Lieblingsemoji?") {
+
                 if (choice2 === "Siri") {
+
                     // paper wins
+
                     return "Das ist mein Lieblingsemoji: :-)";
+
                 } else {
+
                     // scissors wins
+
                     return "You lose! Try again.";
+
                 }
+
               }
+
             if (choice1 === "Wieviele Bücher von Harry Potter gibt es?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Es gibt insgesamt 7 Bücher.";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
               }
+
             if (choice1 === "Wieviele Filme von Harry potter gibt es?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Es gibt 8 Filme von Harry Potter.";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
               }
+
             if (choice1 === "Wen von Harry Potter magst du am liebsten?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Ich mag Hermine am liebsten.";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
               }
+
             if (choice1 === "Wen hasst du von Harry Potter am meisten?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Ich mag Belatrix nicht.";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
                }
+
             if (choice1 === "Wer sagt Harry Potter, dass er ein Zauberer ist?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Rubeus Hagrid sagt es ihm.";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Wie heisst der Vater von Harry Potter?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Er heisst James Potter.";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
              }
+
             if (choice1 === "Wie heisst die Mutter von Harry Potter?") {
+
                 if (choice2 === "Siri") {
+
                     // rock wins
+
                     return "Sie heisst Lily Potter";
+
                 } else {
+
                     // paper wins
+
                     return "You lose! Try again.";
+
                 }
+
             }
         };
+
         // Run the compare function
+
         var results = compare(userChoice,computerChoice);
+
         // Display results
+
         document.write("<br><hr><br>" + results);
+
     </script>
+
   
+
   <center><br><button onclick="myFunction()">Help</button></center>
+
   
+
   <center><a href="index.html">Back</a></center>
-  
-  <hr color="#000000">
- 
-  <center><b>Wie findest du die Antworten von Siri?</b></center>
-  
-  <center><select>
-    <option value="Sehr gut">Sehr gut</option>
-    <option value="Gut">gut</option>
-    <option value="Mittel">Mittel</option>
-    <option value="Schlecht">Schlecht</option>
-    <option value="Sehr schlecht">Sehr schlecht</option>
-  </select></center> 
-  
+
 </body>
+
+
 
 </html>
